@@ -1,5 +1,5 @@
 package batailleNavale;
 
-public class Case {
+public class Case extends Grille {
 
 }
