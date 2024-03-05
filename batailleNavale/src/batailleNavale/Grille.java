@@ -4,105 +4,65 @@ import java.util.Random;
 import java.io.*;
 import java.util.Scanner;
 
-public class Grille {
-	private int largeur; 
-	private int longueur;
-	
-	public Grille() {
-		
-	}
-	public Grille (int myLargeur, int myLongueur) {
-		this.largeur = myLargeur;
-		this.longueur = myLongueur; 
-	}
+class Grille {
+    private Navire[][] grille;
 
-	public int getLargeur() {
-		return largeur;
-	}
+    public void chooseGrid() {
+    	Scanner sc= new Scanner(System.in);
+    	System.out.println("Choisisez la taille de la grille que vous voulez 1 pour 10*10 et 2 pour 5*5");
+    	int choice= sc.nextInt();
+    	int taille=10;
+    	int taille1=5;
+    	switch(choice) {
+    	case 1:
+    		grille1(taille);
+    		break;
+    	
+    	case 2:
+    		grille2(taille1);
+    	}
+    		
+    }
+    public void grille1(int taille) {
+    	grille = new Navire[taille][taille];
+    	
+    }
+    public void grille2(int taille1) {
+    	grille = new Navire[taille1][taille1];
+    }
+    
+    
 
-	public void setLargeur(int largeur) {
-		this.largeur = largeur;
-	}
+    public void ajouterNavire(Navire navire) {
+        grille[navire.posX][navire.posY] = navire;
+    }
 
-	public int getLongueur() {
-		return longueur;
-	}
+    public void ajouterSousNavire(PorteAvions sousNavire) {
+        int x = sousNavire.posX;
+        int y = sousNavire.posY;
 
-	public void setLongueur(int longueur) {
-		this.longueur = longueur;
-	}
-	public void createMiniGrid() {
-		String[][] grille = new String[7][7];
-		for (int i = 0; i < grille.length; i++) {
-			for (int j = 0; j < grille[i].length; j++) {
-				grille[0][j] = Integer.toString(j);
-				grille[i][0] = Integer.toString(i);
-				grille[i][j] = "X";
-			}
-		}
-		for (int i = 0; i < grille.length; i++) {
-			for (int j = 0; j < grille[i].length; j++) {
-				System.out.print(grille[i][j] + " | ");
-			}
-			System.out.println();
-		}
-	}
-	public void createDefaultGrid() {
-		String[][] grille = new String[10][10];
-		for (int i = 0; i < grille.length; i++) {
-			for (int j = 0; j < grille[i].length; j++) {
-				grille[0][j] = Integer.toString(j);
-				grille[i][0] = Integer.toString(i);
-				grille[i][j] = "Y";
-			
-			}
-		}
+        if (sousNavire.estHorizontal) {
+            for (int i = 0; i < sousNavire.taille; i++) {
+                grille[x + i][y] = sousNavire;
+            }
+        } else {
+            for (int i = 0; i < sousNavire.taille; i++) {
+                grille[x][y + i] = sousNavire;
+            }
+        }
+    }
 
-		for (int k = 0; k < 4; k++) {
-	        Navire navire = new Navire();
-	        navire.createPorteAvion();
-	        ajouterNavire(navire, grille);
-	        for (int i = 1; i < navire.getLongueurDuNavire(); i++) {
-		        if (navire.isHorizontal()) {
-		            navire.setPositionX(navire.getPositionX() + i);
-		        } else {
-		            navire.setPositionY(navire.getPositionY() + i);
-		        }
-		    }
-
-	    }
-		for (int i = 0; i < grille.length; i++) {
-			for (int j = 0; j < grille[i].length; j++) {
-				System.out.print(grille[i][j] + " | ");
-			}
-			System.out.println();
-		}
-		
-	}
-	public void chooseGrid() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Merci de choisir la taille de la grille, '1' pour une grille (10x10) et '2' pour une grille (6x6)");
-		int choice = scanner.nextInt();
-		switch(choice) {
-		case 1:
-				createDefaultGrid();
-		break;
-		case 2:
-				createMiniGrid(); 
-		break;
-		}
-	}
-	
-	private void ajouterNavire(Navire navire, String[][] grille) {
-		navire.createPorteAvion();
-	    int x = navire.getPositionX();
-	    int y = navire.getPositionY();
-
-	    // Assurez-vous que les coordonnées du navire sont valides dans la grille
-	    if (x >= 0 && x < grille.length && y >= 0 && y < grille[0].length) {
-	        grille[x][y] = "N"; // Vous pouvez utiliser un autre symbole pour représenter le navire
-	    }
-	    	}
-   }
-	
+    public void afficherGrille() {
+        for (Navire[] ligne : grille) {
+            for (Navire navire : ligne) {
+                if (navire != null) {
+                    System.out.print("X ");
+                } else {
+                    System.out.print("- ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
 
