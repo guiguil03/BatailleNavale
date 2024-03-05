@@ -8,9 +8,9 @@ public class main {
 	  System.out.println("Hello World");
 	  System.out.println("Moi c'est Myrah"); 
 	  
-	  Grille uneGrille = new Grille();
-	  uneGrille.createDefaultGrid();
-	  System.out.println("\n");
-	  uneGrille.createMiniGrid();
+	  /*Grille uneGrille = new Grille();
+	  uneGrille.chooseGrid();*/
+	  
+	  C_Accueil connexion = new C_Accueil();
   }
 }

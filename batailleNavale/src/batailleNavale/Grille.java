@@ -1,4 +1,6 @@
 package batailleNavale;
+import java.io.*;
+import java.util.Scanner;
 
 public class Grille {
 	private int largeur; 
@@ -57,6 +59,19 @@ public class Grille {
 				System.out.print(grille[i][j] + " | ");
 			}
 			System.out.println();
+		}
+	}
+	public void chooseGrid() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Merci de choisir la taille de la grille, '1' pour une grille (10x10) et '2' pour une grille (6x6)");
+		int choice = scanner.nextInt();
+		switch(choice) {
+		case 1:
+				createDefaultGrid();
+		break;
+		case 2:
+				createMiniGrid(); 
+		break;
 		}
 	}
 	
