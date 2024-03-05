@@ -67,10 +67,6 @@ public class Joueur {
 		String nom=scanner.nextLine();
 		scanner.close();
 	 }
-	 public void ChoixGrille() {
-		Scanner sc= new Scanner(System.in);
-		System.out.println("Quel grille voulez vous choisir: 1 pour la 10*10 et 2 pour 6*6");
-	 }
 }
 
 
