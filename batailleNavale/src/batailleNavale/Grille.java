@@ -51,7 +51,8 @@ public class Grille {
 			for (int j = 0; j < grille[i].length; j++) {
 				grille[0][j] = Integer.toString(j);
 				grille[i][0] = Integer.toString(i);
-				grille[i][j] = "X";
+				grille[i][j] = "Y";
+			
 			}
 		}
 
