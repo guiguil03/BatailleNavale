@@ -13,6 +13,13 @@ public class main {
 	  Unjoueur.NbdeJoueur();	  
 	  PorteAvions porteAvions = new PorteAvions();
       porteAvions.createPorteAvion();
+	  System.out.println("Hello World");
+	  System.out.println("Moi c'est Myrah"); 
+	  
+	  /*Grille uneGrille = new Grille();
+	  uneGrille.chooseGrid();*/
+	  
+	  C_Accueil connexion = new C_Accueil();
   }
 
 	  
