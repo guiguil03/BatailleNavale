@@ -28,8 +28,7 @@ public class Partie {
 	}
 	public void setScoreJoueur2(int scoreJoueur2) {
 		ScoreJoueur2 = scoreJoueur2;
-	}
-	public 
+	} 
 	
 };
 
