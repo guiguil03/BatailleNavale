@@ -6,31 +6,27 @@ import java.util.Random;
 
 
 
+
 public class main {
-  public static void main(String[] args) {
-      Grille grille = new Grille();
-      grille.chooseGrid();
-      // Ajouter un navire principal de taille 4 à une position aléatoire
-      Random random = new Random();
-      int posX = random.nextInt(10);  // Limiter la position pour éviter le débordement
-      int posY = random.nextInt(10);  // Limiter la position pour éviter le débordement
-      boolean estHorizontal = random.nextBoolean();
+	public static void main(String[] args) {
+		//Partie partie= new Partie();
+		//partie.InitialisationPartie();
+		Grille grilleJoueur1 = new Grille();
+        Grille grilleJoueur2 = new Grille();
+        grilleJoueur1.initialiserGrille();
+        grilleJoueur2.initialiserGrille();
 
-      // Créer le navire principal de taille 4
-      PorteAvions navirePrincipal = new PorteAvions(posX, posY, 4, estHorizontal);
-
-      // Ajouter le navire principal à la grille
-      grille.ajouterSousNavire(navirePrincipal);
-
-      // Afficher la position du navire principal
-      navirePrincipal.afficherPosition();
-
-      // Afficher la grille avec les navires
-      grille.afficherGrille();
-	  C_Accueil connexion = new C_Accueil();
-  }
-
-	  
+        grilleJoueur1.placerNaviresAleatoires(grilleJoueur1);
+        grilleJoueur2.placerNaviresAleatoires(grilleJoueur2);
+        System.out.println("Grille dun joueur 1");
+        grilleJoueur1.afficherGrille();
+        
+        System.out.println("///////////////////////////:::");
+        if(grilleJoueur1.SatisfaitGrille()) {
+            System.out.println("Grille dun joueur 2");
+            grilleJoueur2.afficherGrille();
+            grilleJoueur2.SatisfaitGrille();
+        }
+    }
+    
 }
-
-

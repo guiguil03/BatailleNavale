@@ -1,4 +1,7 @@
 package batailleNavale;
+import java.io.*;
+
+import java.util.*;
 
 public class Partie {
 	private boolean EtatPartie;
@@ -28,8 +31,12 @@ public class Partie {
 	}
 	public void setScoreJoueur2(int scoreJoueur2) {
 		ScoreJoueur2 = scoreJoueur2;
+	} 
+	public void InitialisationPartie() {
+		Scanner sc= new Scanner(System.in);
+		Joueur joueur= new Joueur();
+		joueur.NbdeJoueur();
+		
+        
 	}
-	public 
-	
 };
-
