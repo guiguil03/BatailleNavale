@@ -27,6 +27,8 @@ public class main {
             System.out.println("Grille dun joueur 2");
             grilleJoueur2.afficherGrille();
             grilleJoueur2.SatisfaitGrille();
+            System.out.println("///////////////////////////:::");
+
         }
 
     }
