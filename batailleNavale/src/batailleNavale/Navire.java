@@ -37,19 +37,11 @@ class Navire {
     }
     public void genererPositionAleatoire(Grille grille) {
         Random random = new Random();
-        setPositionX(random.nextInt(6));
-        setPositionY(random.nextInt(6));
+        setPositionX(random.nextInt(7));
+        setPositionY(random.nextInt(7));
         setHorizontal(random.nextBoolean());
 
-        // Si le sous-marin est horizontal, assurez-vous qu'il rentre dans la grille horizontalement
-        if (isHorizontal() && (getPositionX() + getLongueur()) < 10 ) {
-            setPositionX(10 - getLongueur());
-        }
-
-        // Si le sous-marin est vertical, assurez-vous qu'il rentre dans la grille verticalement
-        if (!isHorizontal() && (getPositionY() + getLongueur()) < 10) {
-            setPositionY(10 - getLongueur());
-        }
+        
     }
 
 }

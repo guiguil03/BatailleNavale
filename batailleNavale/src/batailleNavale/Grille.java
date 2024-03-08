@@ -49,7 +49,7 @@ class Grille {
     
          for (int i = 0; i < navire.getLongueur(); i++) {
             if (x >= 0 && x < grille.length && y >= 0 && y < grille[0].length ) {
-                grille[x][y].setContenu(String.valueOf(navire.getSymbole())); // Utilisation du symbole du navire
+                grille[x][y].setContenu(navire.getSymbole()); // Utilisation du symbole du navire
             }
             if (navire.isHorizontal()) {
                 x++;
@@ -91,6 +91,7 @@ class Grille {
     }
     public static boolean SatisfaitGrille() {
         Grille grilleJoueur1 = new Grille();
+        Partie partie= new Partie();
         boolean running = false;
         Scanner sc = new Scanner(System.in);
 
@@ -104,10 +105,15 @@ class Grille {
                 grilleJoueur1.afficherGrille();
                 running = false;  // This line seems unnecessary, as the while loop will exit
             } else {
-                running = true;  // This line is important to continue the loop if the choice is not 0
+                running = true;
+                // This line is important to continue the loop if the choice is not 0
             }
         }
+
 		return running;
+    }
+    public Case[][] getGrille() {
+        return grille;
     }
 
 

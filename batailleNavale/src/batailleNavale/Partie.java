@@ -8,6 +8,21 @@ public class Partie {
 	private Joueur joueurs;
 	private int ScoreJoueur1;
 	private int ScoreJoueur2;
+	private Grille grilleJoueur1;
+    private Grille grilleJoueur2;
+
+    public Partie() {
+        grilleJoueur1 = new Grille();
+        grilleJoueur2 = new Grille();
+    }
+    public void chargerGrilleJoueur1(Grille grille) {
+        this.grilleJoueur1 = grille;
+    }
+
+    public void chargerGrilleJoueur2(Grille grille) {
+        this.grilleJoueur2 = grille;
+    }
+
 	public boolean isEtatPartie() {
 		return EtatPartie;
 	}
@@ -36,7 +51,9 @@ public class Partie {
 		Scanner sc= new Scanner(System.in);
 		Joueur joueur= new Joueur();
 		joueur.NbdeJoueur();
-		
         
 	}
+	   
+	
+
 };
