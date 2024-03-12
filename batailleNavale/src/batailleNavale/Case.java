@@ -3,15 +3,15 @@ package batailleNavale;
 
 class Case {
     private String contenu;
-    private Navire navire;
+    private static Navire navire;
 
-    public boolean estOccupee() {
+    public static boolean estOccupee() {
         return navire != null;
     }
     
 
-    public boolean getNavire() {
-        return false;
+    public static boolean getNavire() {
+        return true;
     }
 
     public void occuperAvecNavire(Navire navire) {

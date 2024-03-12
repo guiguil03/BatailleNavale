@@ -68,6 +68,19 @@ class Grille {
             System.out.println();
         }
     }
+    public void afficherGrilleJoueur() {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                // Affichez seulement les cases touchées et les navires coulés
+                if (grille[i][j].getContenu().equals("K") || grille[i][j].getContenu().equals("Y")) {
+                    System.out.print(grille[i][j]);
+                } else {
+                    System.out.print("-"); // Cachez les navires non touchés
+                }
+            }
+            System.out.println();
+        }
+    }
     public void placerNaviresAleatoires(Grille grille) {
         Random random = new Random();
 
@@ -89,8 +102,9 @@ class Grille {
             grille.ajouterNavire(contreTorpillleur);
         }
     }
-    public static boolean SatisfaitGrille() {
+    public static boolean SatisfaitGrille1() {
         Grille grilleJoueur1 = new Grille();
+        Grille grilleJoueur2 = new Grille();
         Partie partie= new Partie();
         boolean running = false;
         Scanner sc = new Scanner(System.in);
@@ -103,19 +117,53 @@ class Grille {
                 grilleJoueur1.initialiserGrille();
                 grilleJoueur1.placerNaviresAleatoires(grilleJoueur1);
                 grilleJoueur1.afficherGrille();
-                running = false;  // This line seems unnecessary, as the while loop will exit
+                running = false;  
             } else {
                 running = true;
-                // This line is important to continue the loop if the choice is not 0
             }
         }
 
 		return running;
     }
+    
+    public static boolean SatisfaitGrille2() {
+    	Grille grilleJoueur2 = new Grille();
+    	Partie partie= new Partie();
+    	boolean running = false;
+    	Scanner sc = new Scanner(System.in);
+    	
+    	while (!running) {
+    		System.out.println("La grille vous convient-elle? 1/0");
+    		int choice = sc.nextInt();
+    		
+    		if (choice == 0) {
+    			grilleJoueur2.initialiserGrille();
+    			grilleJoueur2.placerNaviresAleatoires(grilleJoueur2);
+    			grilleJoueur2.afficherGrille();
+    			running = false;  
+    		} else {
+    			running = true;
+    		}
+    	}
+    	
+    	return running;
+    }
+    
     public Case[][] getGrille() {
         return grille;
     }
+    public void caseContientNavire(int ligne, int colonne) {
+        grille[ligne][colonne].setContenu("N");
+    }
+    public boolean caseContientRien(int ligne, int colonne) {
+    	return grille[ligne][colonne].getContenu()=="-";
+    }
 
+    public void marquerCaseTouchee(int ligne, int colonne) {
+        
+        grille[ligne][colonne].setContenu("T");
+    }
+        
 
    
 
