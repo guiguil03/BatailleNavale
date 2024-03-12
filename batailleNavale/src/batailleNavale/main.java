@@ -12,7 +12,7 @@ public class main {
 		Partie partie= new Partie();
 		Grille grille= new Grille();
 		Joueur joueur= new Joueur();
-		joueur.NbdeJoueur();
+		//joueur.NbdeJoueur();
 		//partie.InitialisationPartie();
 		partie.Partie();
     }

@@ -169,34 +169,6 @@ public class C_Accueil extends JFrame implements ActionListener{
         this.setJMenuBar(menu);
     }	
     public void affichageMenuVisiteur() {
-        // Cr?ation de la barre de menu
-        JMenuBar menu = new JMenuBar();
 
-        // Cr?ation des diff?rents menus
-        JMenu menuRes = new JMenu("Menu Visiteur");
-        JMenu menuUser = new JMenu("Menu User");
-
-
-        // Cr?ation d'?l?ment des menus
-        this.listeReservation = new JMenuItem("Voir les r�servations");
-        this.rechercherMateriel = new JMenuItem("Rechercher du Materiel");
-        this.emprunterMateriel = new JMenuItem("Emprunter Materiel");
-        
-        this.userGestion = new JMenuItem("Gestion User");
-
-        // Ajout de l'�l?ment au menu
-        menuRes.add(listeReservation);
-        menuRes.add(rechercherMateriel);
-        menuRes.add(emprunterMateriel);
-        menuUser.add(userGestion);
-
-        //on ecoute les items du menu
-
-
-        // Ajout du menu dans la barre de menu
-        menu.add(menuRes);
-        menu.add(menuUser);
-        // Permet de d?finir le menu utilis? dans la JFrame
-        this.setJMenuBar(menu);
     }
 }
