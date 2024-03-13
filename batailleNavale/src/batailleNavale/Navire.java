@@ -1,49 +1,47 @@
 package batailleNavale;
-
 import java.util.Random;
+class Navire {
+    public Case[][] grille;
 
-public class Navire {
-	private int positionX;
-	private int positionY;
-	private boolean horizontal;
-	private boolean vertical;
-    private int longueurDuNavire = 4; // Ajoutez cette propriété pour définir la longueur du navire
+    protected int positionX;
+    protected int positionY;
+    protected boolean horizontal;
 
-	public int getPositionX() {
-		return positionX;
-	}
-	public void setPositionX(int positionX) {
-		this.positionX = positionX;
-	}
-	
-	public int getPositionY() {
-		return positionY;
-	}
-	public void setPositionY(int positionY) {
-		this.positionY = positionY;
-	}
-	public boolean isHorizontal() {
-		return horizontal;
-	}
-	public void setHorizontal(boolean horizontal) {
-		this.horizontal = horizontal;
-	}
-	public boolean isVertical() {
-		return vertical;
-	}
-	public void setVertical(boolean vertical) {
-		this.vertical = vertical;
-	}
-	int posX;
-    int posY;
-
-    public Navire(int posX, int posY) {
-        this.posX = posX;
-        this.posY = posY;
+    public int getPositionX() {
+        return positionX;
     }
 
-    public void afficherPosition() {
-        System.out.println("Position du navire : (" + posX + ", " + posY + ")");
+    public int getPositionY() {
+        return positionY;
     }
-	
+
+    public boolean isHorizontal() {
+        return horizontal;
+    }
+
+    public int getLongueur() {
+        return 1; // Par défaut, un navire a une longueur de 1 case
+    }
+
+    public String getSymbole() {
+        return "N"; // Par défaut, utiliser "N" comme symbole
+    }
+    public int setPositionX(int positionX) {
+    	return this.positionX=positionX;
+    }
+    public int setPositionY(int positionY) {
+    	return this.positionY=positionY;
+    }
+    public boolean setHorizontal(boolean horizontal) {
+    	return this.horizontal=horizontal;
+    }
+    public void genererPositionAleatoire(Grille grille) {
+        Random random = new Random();
+        setPositionX(random.nextInt(7));
+        setPositionY(random.nextInt(7));
+        setHorizontal(random.nextBoolean());
+
+        
+    }
+
 }

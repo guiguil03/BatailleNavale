@@ -28,7 +28,7 @@ public class Joueur {
 	}
 	
 	public void NbdeJoueur(){
-		System.out.println("Hello");
+		System.out.println("Hello bienvenue sur notre jeu de bataille navale");
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Veuillez saisir si vous fait une partie contre un robot (1) ou contre un autre joueur(2)");
