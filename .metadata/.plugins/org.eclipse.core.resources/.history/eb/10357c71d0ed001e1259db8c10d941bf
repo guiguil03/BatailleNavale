@@ -1,0 +1,42 @@
+package batailleNavale;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+
+
+
+public class main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int tailleX, tailleY;
+		
+        do {
+            System.out.println("Entrez la taille de la grille (nombre de lignes égale au moins à 6) : ");
+            tailleX = sc.nextInt();
+
+            System.out.println("Entrez la taille de la grille (nombre de colonnes égale au moins à 6) : ");
+            tailleY = sc.nextInt();
+
+            if (tailleX < 6 || tailleY < 6) {
+                System.out.println("La taille de la grille est trop petite, veuillez recommencer.");
+            }
+        } while (tailleX < 6 || tailleY < 6);
+		
+		Partie partie= new Partie();
+		Joueur joueur= new Joueur();
+		//joueur.NbdeJoueur();
+		//partie.InitialisationPartie();
+
+        Grille grille = new Grille(tailleX, tailleY);
+        
+        
+		partie.Partie(tailleX,tailleY);
+		//C_Accueil lancement = new C_Accueil();
+    }
+    
+}
