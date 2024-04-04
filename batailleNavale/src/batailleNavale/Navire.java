@@ -6,9 +6,17 @@ class Navire {
     protected int positionX;
     protected int positionY;
     protected boolean horizontal;
+    protected boolean estPlace;
 
     public int getPositionX() {
         return positionX;
+    }
+    public boolean estPlace() {
+        return estPlace;
+    }
+
+    public void setPlace(boolean estPlace) {
+        this.estPlace = estPlace;
     }
 
     public int getPositionY() {
@@ -26,6 +34,9 @@ class Navire {
     public String getSymbole() {
         return "N"; // Par défaut, utiliser "N" comme symbole
     }
+    public boolean caseEstLibre(int x, int y) {
+        return grille[x][y].getContenu().equals("-");
+    }
     public int setPositionX(int positionX) {
     	return this.positionX=positionX;
     }
@@ -35,10 +46,10 @@ class Navire {
     public boolean setHorizontal(boolean horizontal) {
     	return this.horizontal=horizontal;
     }
-    public void genererPositionAleatoire(Grille grille) {
+    public void genererPositionAleatoire(Case[][] grilleCases,int tailleX,int tailleY) {
         Random random = new Random();
-        setPositionX(random.nextInt(7));
-        setPositionY(random.nextInt(7));
+        setPositionX(random.nextInt(tailleX-3));
+        setPositionY(random.nextInt(tailleY-3));
         setHorizontal(random.nextBoolean());
 
         
