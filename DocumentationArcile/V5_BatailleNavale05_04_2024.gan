@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2024-01-22" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.2.3247" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="200" order="0"/>
+        <field id="tpd4" name="Date de début" width="75" order="1"/>
+        <field id="tpd5" name="Date de fin" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <timeline>
+            <![CDATA[18]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#0000ff #0033ff #00ccff #666666 #999999 #cc0066 #990000 #9900ff #00ffff]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Création UML" color="#666666" meeting="false" start="2024-02-20" duration="5" complete="100" expand="false">
+            <task id="1" name="Réflexion Classes, Attributs, Fonctions" color="#666666" meeting="false" start="2024-02-20" duration="5" complete="100" expand="true"/>
+        </task>
+        <task id="2" name="Choix des outils et Environnement de développement" color="#666666" meeting="false" start="2024-02-27" duration="1" complete="100" expand="true"/>
+        <task id="3" name="Interface Graphique" color="#0000ff" meeting="false" start="2024-02-28" duration="49" complete="39" expand="true">
+            <task id="4" name="Fenêtre Accueil (choix de partie)" color="#0000ff" meeting="false" start="2024-02-28" duration="17" complete="100" expand="false"/>
+            <task id="5" name="Fenêtre Choix noms des joueurs et taille Grille" color="#0033ff" meeting="false" start="2024-03-22" duration="5" complete="100" expand="true"/>
+            <task id="6" name="Fenêtre Affichage Grille" color="#0000ff" meeting="false" start="2024-03-29" duration="5" complete="100" thirdDate="2024-03-29" thirdDate-constraint="0" expand="true"/>
+            <task id="26" name="Initialisation grille joueur 1 puis 2" color="#0000ff" meeting="false" start="2024-04-05" duration="3" complete="85" thirdDate="2024-01-29" thirdDate-constraint="0" expand="true"/>
+            <task id="27" name="Placement des bateau manuellement" color="#0000ff" meeting="false" start="2024-04-05" duration="7" complete="10" thirdDate="2024-01-29" thirdDate-constraint="0" priority="3" expand="true"/>
+            <task id="29" name="Jouer contre ordinateur" color="#0000ff" meeting="false" start="2024-04-05" duration="7" complete="20" thirdDate="2024-01-22" thirdDate-constraint="0" expand="true"/>
+            <task id="30" name="Exécution grille joueur l'une après l'autre" color="#0033ff" meeting="false" start="2024-04-05" duration="7" complete="10" thirdDate="2024-01-22" thirdDate-constraint="0" expand="true"/>
+            <task id="31" name="Mise en place sérialisation dans l'IHM" color="#0000ff" meeting="false" start="2024-04-05" duration="15" complete="0" thirdDate="2024-01-22" thirdDate-constraint="0" expand="true"/>
+            <task id="33" name="Design page" color="#0000ff" meeting="false" start="2024-04-25" duration="8" complete="0" thirdDate="2024-01-22" thirdDate-constraint="0" expand="true"/>
+            <task id="32" name="Fin de la partie" color="#0000ff" meeting="false" start="2024-04-25" duration="8" complete="0" thirdDate="2024-01-22" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="23" name="Modèle" color="#00ccff" meeting="false" start="2024-02-28" duration="44" complete="88" expand="true">
+            <task id="15" name="Création Main" color="#00ccff" meeting="false" start="2024-02-28" duration="14" complete="100" thirdDate="2024-02-28" thirdDate-constraint="0" expand="true"/>
+            <task id="14" name="Création Classe Lancement Partie" color="#00ccff" meeting="false" start="2024-02-28" duration="14" complete="100" expand="true"/>
+            <task id="13" name="Création Classe Joueur" color="#00ccff" meeting="false" start="2024-02-28" duration="14" complete="100" expand="true"/>
+            <task id="12" name="Création Classe Case" color="#00ccff" meeting="false" start="2024-03-04" duration="11" complete="100" expand="true"/>
+            <task id="11" name="Création Classe Grille" color="#00ccff" meeting="false" start="2024-02-28" duration="14" complete="100" expand="true"/>
+            <task id="10" name="Création Classe Contre Torpilleur" color="#00ccff" meeting="false" start="2024-02-28" duration="13" complete="100" expand="true"/>
+            <task id="9" name="Création Classe PorteAvions" color="#00ccff" meeting="false" start="2024-02-28" duration="13" complete="100" expand="true"/>
+            <task id="8" name="Création Classe Torpilleur" color="#00ccff" meeting="false" start="2024-02-28" duration="13" complete="100" expand="true"/>
+            <task id="7" name="Création Classe Navire" color="#00ccff" meeting="false" start="2024-02-28" duration="13" complete="100" expand="true"/>
+            <task id="24" name="Sauvegarde de la partie" color="#00ccff" meeting="false" start="2024-03-29" duration="8" complete="75" thirdDate="2024-04-02" thirdDate-constraint="0" expand="true"/>
+            <task id="25" name="Radar" color="#00ccff" meeting="false" start="2024-04-09" duration="15" complete="0" thirdDate="2024-04-02" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="16" name="Résolution Bugs" color="#990000" meeting="false" start="2024-03-19" duration="9" complete="100" expand="false">
+            <task id="18" name="Résoudre pour qu'on ne puisse pas viser une case qui a déjà été découverte" color="#990000" meeting="false" start="2024-03-19" duration="9" complete="100" expand="true"/>
+            <task id="17" name="Résoudre pour ne pas pouvoir mettre des navires si la case est occupée" color="#990000" meeting="false" start="2024-03-19" duration="9" complete="100" expand="true"/>
+        </task>
+        <task id="20" name="Revoir le Gantt" meeting="false" start="2024-03-28" duration="1" complete="100" expand="true"/>
+        <task id="21" name="Résolution des soucis sur Git" meeting="false" start="2024-03-28" duration="1" complete="100" expand="true"/>
+        <task id="22" name="Préparation soutenance" color="#000000" meeting="false" start="2024-05-07" duration="10" complete="0" thirdDate="2024-05-07" thirdDate-constraint="0" expand="true">
+            <task id="19" name="Préparation support" color="#8cb6ce" meeting="false" start="2024-05-07" duration="5" complete="0" thirdDate="2024-05-07" thirdDate-constraint="0" expand="true"/>
+            <task id="28" name="Préparation oral (entrainement)" color="#8cb6ce" meeting="false" start="2024-05-13" duration="6" complete="0" thirdDate="2024-01-29" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Yohann" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Guillaume" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Myrah" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Kilian" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="19" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="6" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="5" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="33" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="12" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="14" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="19" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="25" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="15" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="26" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="30" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="9" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="19" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="20" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="6" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="7" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="26" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="29" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="33" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="14" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="19" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="6" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="24" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="15" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="31" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
