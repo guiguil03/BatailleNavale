@@ -11,7 +11,7 @@ public class Partie implements Serializable{
 	private Joueur joueur1;
 	private Joueur joueur2;
 
-
+	
 
 	public void chargerGrilleJoueur1(Grille grille) {
 		this.grilleJoueur1 = grille;
@@ -173,7 +173,7 @@ public class Partie implements Serializable{
 		Grille grilleJoueur2a= new Grille(grilleJoueur2);
 		int compteur=0;
 		Scanner scanner = new Scanner(System.in);
-
+	
 		System.out.println("Voulez vous génerer automatiquement la grille (0) ou de facon manuelle (1)");
 		int choice= scanner.nextInt();
 		scanner.nextLine();

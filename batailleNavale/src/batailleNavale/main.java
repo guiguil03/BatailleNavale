@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class main {
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		int tailleX, tailleY;
 		boolean horinzontal;
 		
@@ -56,7 +56,7 @@ public class main {
         
         
 		partie.Partie(joueur,joueur1,tailleX,tailleY);
-		partie.sauvegarderPartie("test.sav");
+		partie.sauvegarderPartie("test.sav");*/
 
 		C_Accueil lancement = new C_Accueil();
     }

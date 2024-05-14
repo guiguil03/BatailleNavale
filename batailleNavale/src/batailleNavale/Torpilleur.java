@@ -10,4 +10,8 @@ class Torpilleur extends Navire {
     public int getLongueur() {
         return 2; // Le porte-avions a une longueur de 5 cases
     }
+    public boolean caseEstLibre(Grille grille) {
+		// TODO Auto-generated method stub
+		return true;
+	}
 }

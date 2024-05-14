@@ -7,13 +7,12 @@ class ContreTorpilleur extends Navire {
         return 3; // Le porte-avions a une longueur de 5 cases
     }
 
-	
-	public ContreTorpilleur() {
-	}
-	
     @Override
     public String getSymbole() {
         return "C"; // Utiliser "P" comme symbole pour le porte-avions
     }
-    
+    public boolean caseEstLibre(Grille grille) {
+		// TODO Auto-generated method stub
+		return true;
+	}
 }

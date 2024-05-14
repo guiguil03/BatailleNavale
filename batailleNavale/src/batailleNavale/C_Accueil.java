@@ -15,8 +15,12 @@ import java.util.regex.Pattern;
 public class C_Accueil extends JFrame implements ActionListener{
     //Panel
     private JPanel panelButton;
+    //Jtf
     //Button
     private JButton btnConnexion;
+    
+    private Pattern p;
+    private Matcher m;
     
     public C_Accueil() {
     	this.setTitle("Bataille Navale");
@@ -24,12 +28,12 @@ public class C_Accueil extends JFrame implements ActionListener{
         this.setSize(1200, 700);
         this.setResizable(true);
         
-       
+        //Panel
         panelButton = new JPanel();
+        //Label et Jtf
         
         //button
         btnConnexion = new JButton ("Jouer");
-        btnConnexion.setBackground(Color.PINK);
         btnConnexion.addActionListener(this);
         panelButton.add(btnConnexion);
         this.getContentPane().add(panelButton, BorderLayout.SOUTH);
@@ -51,9 +55,15 @@ public class C_Accueil extends JFrame implements ActionListener{
     }
     public void actionPerformed ( ActionEvent evenement) {
         if(evenement.getSource() == btnConnexion) {
+        	getContentPane().removeAll();
+            getContentPane().add(new ChoixPartie().getMonPanelGlobal());
+            getContentPane().revalidate();
+            getContentPane().repaint();
         	
         }
+        
+
             
     }
-	
+  	
 }
